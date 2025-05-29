@@ -5,20 +5,20 @@
 class ConfigLsp < Formula
   desc "Finally a LSP for your config files: gitconfig, fstab, aliases, hosts, wireguard, ssh_config, sshd_config, and more to come!"
   homepage "https://github.com/Myzel394/config-lsp"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.1/config-lsp_Darwin_x86_64.tar.gz"
-      sha256 "541393f1acc191d1f9fe6f615407ddf32df7cefbc64080c3410fc074db5c7ccf"
+      url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.2/config-lsp_Darwin_x86_64.tar.gz"
+      sha256 "5ce3f95f685810fdb5e1e1f2de93fa33018fe2beba6da8944f8f83d09f6df0d5"
 
       def install
         bin.install "config-lsp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.1/config-lsp_Darwin_arm64.tar.gz"
-      sha256 "ac2d194a28c804f8319b6b4332a384c19ac387f1d5e71f11f3d3dae60f311af3"
+      url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.2/config-lsp_Darwin_arm64.tar.gz"
+      sha256 "ba1a47ac3fc6bca26ded375fb7352f70e53c692784932a08a6a44c72283f546c"
 
       def install
         bin.install "config-lsp"
@@ -27,24 +27,18 @@ class ConfigLsp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.1/config-lsp_Linux_x86_64.tar.gz"
-        sha256 "7e07498bf2a91cd7b67633ab554b55925d3c5be4ec9cc820caa9bf6bba3cb28a"
-
-        def install
-          bin.install "config-lsp"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.2/config-lsp_Linux_x86_64.tar.gz"
+      sha256 "4643167b0bd091f7bf374bb4dd80bc4ca432636b57d0983c939a17f744e80fe1"
+      def install
+        bin.install "config-lsp"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.1/config-lsp_Linux_arm64.tar.gz"
-        sha256 "ea5891e835603c3d66eebbacd4de041ada1d5bab9d4fe2c7cee6bc85b9b75327"
-
-        def install
-          bin.install "config-lsp"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/Myzel394/config-lsp/releases/download/v0.2.2/config-lsp_Linux_arm64.tar.gz"
+      sha256 "732140130f09362104c9098a90f9840cf522341e55ada90d74c9cde075ef9111"
+      def install
+        bin.install "config-lsp"
       end
     end
   end
