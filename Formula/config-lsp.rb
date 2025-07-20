@@ -10,7 +10,7 @@ class ConfigLsp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Myzel394/config-lsp/releases/download/v0.3.1/config-lsp_Darwin_x86_64.tar.gz"
-      sha256 "a397253502bcdaeb7a123331ac09e58178b98100c0e21da218cc0ad0c19dde25"
+      sha256 "adc9c03c575e5de86aab72ef755f1ef5a93063e481456db163340d20caf05822"
 
       def install
         bin.install "config-lsp"
@@ -18,7 +18,7 @@ class ConfigLsp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Myzel394/config-lsp/releases/download/v0.3.1/config-lsp_Darwin_arm64.tar.gz"
-      sha256 "f2d922babd7341f326e55252cda60079ec881d913146df94012f2d010f4f573b"
+      sha256 "b6d6b90b342f5ed2b2a8d920a995fe75f84e6264196d9ef2398da8546ac8d3ce"
 
       def install
         bin.install "config-lsp"
@@ -29,14 +29,14 @@ class ConfigLsp < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/Myzel394/config-lsp/releases/download/v0.3.1/config-lsp_Linux_x86_64.tar.gz"
-      sha256 "92ac39a6c2b1f86689aa5a05b1d655c5582a20dd55fef8fe7ae8036f6f050b18"
+      sha256 "32039e41cfa5ef63083a4d092269bcc03cea26bfea6f14f2ddb82a749c64b74d"
       def install
         bin.install "config-lsp"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/Myzel394/config-lsp/releases/download/v0.3.1/config-lsp_Linux_arm64.tar.gz"
-      sha256 "4d20362de6eee6404421b8a0221f0e8432f3c18ecc5beff3c67de5bd315387a6"
+      sha256 "49162ebf95aabc7b523bcf032e63525e4bb3cbcdc88ec543e858abc9cd50f161"
       def install
         bin.install "config-lsp"
       end
